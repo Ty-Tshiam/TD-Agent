@@ -17,7 +17,7 @@ graph TD
         F[User Query] --> G[Query Optimization Agent]
         G --> H[Hybrid Search: Dense + Sparse]
         H --> I[Qwen-8B Reranker]
-        I --> J[Gemini 3 Flash Generator]
+        I --> J[Gemini 1.5 Pro Generator]
         J --> K[Cited Analysis Response]
     end
 
@@ -80,6 +80,19 @@ streamlit run app.py
 - **Ingestion**: Handles PDF discovery, Azure transformation, and metadata enrichment via Llama 3.
 - **Retriever**: Translates natural language into Pinecone filters and hybrid search weights.
 - **Generator**: Formats context and orchestrates the final Gemini response.
+
+## 🗺️ Future Roadmap
+
+- [ ] **Earnings Transcripts Ingestion**: Expand the pipeline to ingest and parse quarterly earnings call transcripts for qualitative sentiment analysis.
+- [ ] **Advanced Evaluation**:
+    - Integrate **Ragas** (Retrieval-Augmented Generation Assessment) for automated component-level metrics.
+    - Implement **Conformal RAG** to provide statistical guarantees on model responses.
+- [ ] **DevOps & Scaling**:
+    - Automate builds with **GitHub Actions**.
+    - Orchestrate container deployment using **Kubernetes (K8s)**.
+- [ ] **UI/UX Enhancements**:
+    - **Reranking Transparency**: Display the relevance scores from the Qwen-8B reranker in the UI to build user trust.
+    - **Real-time Discovery**: Add a frontend trigger to initiate the ingestion of the latest available reports without restarting the app.
 
 ---
 *Developed for high-fidelity financial analysis of TD Bank Group.*

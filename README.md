@@ -17,7 +17,7 @@ graph TD
         F[User Query] --> G[Query Optimization Agent]
         G --> H[Hybrid Search: Dense + Sparse]
         H --> I[Qwen-8B Reranker]
-        I --> J[Gemini 1.5 Pro Generator]
+        I --> J[Gemini 3 Flash Generator]
         J --> K[Cited Analysis Response]
     end
 
@@ -93,6 +93,10 @@ streamlit run app.py
 - [ ] **UI/UX Enhancements**:
     - **Reranking Transparency**: Display the relevance scores from the Qwen-8B reranker in the UI to build user trust.
     - **Real-time Discovery**: Add a frontend trigger to initiate the ingestion of the latest available reports without restarting the app.
+- [ ] **Additional Agent Toolset**:
+    - Add built-in calculator for ratio analysis, valuation metrics, and scenario modeling.
+    - Integrate real-time stock price retrieval via APIs (e.g., Yahoo Finance, Alpha Vantage).
+    - Support additional agent actions like financial statement fetching, dividend history, and market comparison.
 
 ---
 *Developed for high-fidelity financial analysis of TD Bank Group.*

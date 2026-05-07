@@ -17,7 +17,7 @@ graph TD
         F[User Query] --> G[Query Optimization Agent]
         G --> H[Hybrid Search: Dense + Sparse]
         H --> I[Qwen-8B Reranker]
-        I --> J[Gemini 1.5 Pro Generator]
+        I --> J[Gemini 3 Flash Generator]
         J --> K[Cited Analysis Response]
     end
 

@@ -1,0 +1,8 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+
+[folderWatch]
+globPatterns = ["app.py", "generation.py", "retrieval.py", "ingestion.py"]
